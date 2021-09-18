@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<link rel="stylesheet" href="mystyle.css">
+	</head>
+	<body>
+
+		<div class="progress-wrapper ">
+		  <div class="progress-bar progress-bar-width color1">
+		    <div class="progress-bar-anim">
+				<div class="percent_label">50%</div>
+		    </div>
+		  </div>
+		</div>
+
+		<div class="progress-wrapper ">
+		  <div class="progress-bar progress-bar-width color2">
+		    <div class="progress-bar-anim">
+				<div class="percent_label">50%</div>
+		    </div>
+		  </div>
+		</div>
+
+		<div class="progress-wrapper ">
+		  <div class="progress-bar progress-bar-width color3">
+		    <div class="progress-bar-anim">
+				<div class="percent_label">50%</div>
+		    </div>
+		  </div>
+		</div>
+
+		<div class="progress-wrapper ">
+		  <div class="progress-bar progress-bar-width color4">
+		    <div class="progress-bar-anim">
+				<div class="percent_label">50%</div>
+		    </div>
+		  </div>
+		</div>
+
+		<div class="progress-wrapper ">
+		  <div class="progress-bar progress-bar-width color5">
+		    <div class="progress-bar-anim">
+				<div class="percent_label">50%</div>
+		    </div>
+		  </div>
+		</div>
+
+		<button class="button-success pure-button" onclick="javascript:finish();">Finish</button>
+
+
+		<script type="text/javascript">
+			function finish() {
+
+				var btn = document.getElementsByClassName('pure-button')[0].innerText;
+				var bars = document.getElementsByClassName('progress-bar-width');
+				var labels = document.getElementsByClassName('percent_label');
+
+				if(btn == 'Finish'){
+					document.getElementsByClassName('pure-button')[0].innerText = 'Reset';
+					for (var i = 0; i < bars.length; i++) {
+						bars[i].style.width = '100%';
+						labels[i].innerText = '100%';
+					}					
+
+
+				}else{
+
+					document.getElementsByClassName('pure-button')[0].innerText = 'Finish';
+					for (var i = 0; i < bars.length; i++) {
+						bars[i].style.width = '50%';
+						labels[i].innerText = '50%';
+					}
+				}
+			}
+		</script>
+	</body>
+</html>
